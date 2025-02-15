@@ -1,35 +1,23 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import AutoCompleteSearch from "./components/AutoCompleteSearch";
+import ThemeToggle from "./components/ToggleTheme";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="min-h-screen flex flex-col items-center bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+      <header className="w-full flex justify-between p-4 bg-white dark:bg-gray-800 shadow-md">
+      <h1 className="text-lg font-bold">Search</h1>
+        <ThemeToggle />
+      </header>
+      {/* <div className="w-[60%] m-auto bg-white h-full">
+        <AutoCompleteSearch />
+      </div> */}
+      <div className="relative w-96 mt-10">
+        <div className="flex items-center border flex-col border-gray-300 dark:border-gray-600 rounded-md p-2 bg-white dark:bg-gray-700">
+          <AutoCompleteSearch />
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    </div>
+  );
+};
 
-export default App
+export default App;
