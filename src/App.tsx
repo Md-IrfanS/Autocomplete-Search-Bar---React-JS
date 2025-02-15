@@ -8,9 +8,6 @@ const App = () => {
       <h1 className="text-lg font-bold">Search</h1>
         <ThemeToggle />
       </header>
-      {/* <div className="w-[60%] m-auto bg-white h-full">
-        <AutoCompleteSearch />
-      </div> */}
       <div className="relative w-96 mt-10">
         <div className="flex items-center border flex-col border-gray-300 dark:border-gray-600 rounded-md p-2 bg-white dark:bg-gray-700">
           <AutoCompleteSearch />

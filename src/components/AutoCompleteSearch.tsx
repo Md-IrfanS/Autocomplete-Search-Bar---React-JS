@@ -20,8 +20,6 @@ const AutoCompleteSearch = () => {
     delay: 400,
   });
 
-  
-
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { value } = e.target;
     setSearchValue(value);
@@ -38,10 +36,8 @@ const AutoCompleteSearch = () => {
     }
   };
 
-  // Handle dynamic results (if products exist, show them; else, iterate through all keys)
-  const results: Product[] = Array.isArray(searchResults?.products)
-    ? searchResults?.products
-    : [];
+  
+  const results: Product[] = Array.isArray(searchResults?.products) ? searchResults?.products : [];
 
   const handleSearchClick = (value: string) => {
     setSearchValue(value);
